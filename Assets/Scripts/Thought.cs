@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Thought : MonoBehaviour {
 
-	public GameObject target;
-	public float speed;
+
+	public float speed = 2;
+
 
 	private int flavor;
 	
@@ -21,6 +22,7 @@ public class Thought : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		flavor = Flavors.randColor();
+		flavor = 1;
 	}
 	
 	// Update is called once per frame
@@ -29,8 +31,7 @@ public class Thought : MonoBehaviour {
 	}
 
 	void UpdateMove(){
-		transform.position = Vector3.Lerp(transform.position, target.transform.position, Time.deltaTime * this.speed);
-
+		transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, Time.deltaTime * speed);
 	}
 
 }
