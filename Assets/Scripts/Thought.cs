@@ -7,7 +7,7 @@ public class Thought : MonoBehaviour {
 	public float speed = 2;
 
 
-	private int flavor;
+	public int flavor;
 	
 	public int Flavor{
 		get{
@@ -21,7 +21,6 @@ public class Thought : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		flavor = Flavors.randColor();
 		flavor = 1;
 	}
 	
