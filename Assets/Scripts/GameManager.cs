@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
 
 	void SpawnThought(){
 		Vector3 spawnplace = spawnPoints[(int)UnityEngine.Random.Range(0,spawnPoints.Length)].position;
-		Thought thought = thoughts[(int)UnityEngine.Random.value*thoughts.Length];
+		Thought thought = thoughts[(int)UnityEngine.Random.Range(0,thoughts.Length)];
 		GameObject.Instantiate(thought,spawnplace,Quaternion.identity);
 	}
 }

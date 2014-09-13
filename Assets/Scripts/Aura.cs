@@ -18,7 +18,7 @@ public class Aura : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		flavor = 1;
+		flavor = 3;
 	}
 	
 	// Update is called once per frame
