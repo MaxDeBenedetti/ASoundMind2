@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (Rigidbody))]
+[RequireComponent(typeof (SpriteRenderer))]
 public class Beam : MonoBehaviour {
 
 	private int flavor;
@@ -15,7 +17,17 @@ public class Beam : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		SpriteRenderer spr = this.GetComponent<SpriteRenderer>();
+		switch (flavor) {
+		case 1: spr.color = Color.blue;
+			break;
+		case 2: spr.color = Color.green;
+			break;
+		case 3: spr.color = Color.red;
+			break;
+		default: spr.color = Color.grey;
+						break;
+		}
 	}
 	
 	// Update is called once per frame

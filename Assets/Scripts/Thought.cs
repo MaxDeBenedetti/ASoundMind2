@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (Rigidbody))]
 public class Thought : MonoBehaviour {
 
 
@@ -21,7 +22,7 @@ public class Thought : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		flavor = 1;
+
 	}
 	
 	// Update is called once per frame
