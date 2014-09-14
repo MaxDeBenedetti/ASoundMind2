@@ -236,3 +236,5 @@ ExportedObj/
 *.user
 *.unityproj
 *.booproj
+
+Builds/

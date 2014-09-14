@@ -11,7 +11,7 @@ Platform assembly: C:\Users\modsm_000\Documents\ASoundMind2\Builds\GuruMeditatio
 Loading C:\Users\modsm_000\Documents\ASoundMind2\Builds\GuruMeditation_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\Users\modsm_000\Documents\ASoundMind2\Builds\GuruMeditation_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\modsm_000\Documents\ASoundMind2\Builds\GuruMeditation_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.043 seconds
+- Completed reload, in  0.044 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -19,11 +19,5 @@ UnloadTime: 0.236920 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 195.
-Total: 0.467853 ms (FindLiveObjects: 0.007697 ms CreateObjectMapping: 0.006414 ms MarkObjects: 0.056450 ms  DeleteObjects: 0.002565 ms)
-
-UnloadTime: 0.440911 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 44 unused Assets to reduce memory usage. Loaded Objects now: 95.
-Total: 5.639045 ms (FindLiveObjects: 0.005131 ms CreateObjectMapping: 0.007697 ms MarkObjects: 0.067996 ms  DeleteObjects: 5.055725 ms)
+Total: 0.468281 ms (FindLiveObjects: 0.008553 ms CreateObjectMapping: 0.006842 ms MarkObjects: 0.056022 ms  DeleteObjects: 0.002993 ms)
 
