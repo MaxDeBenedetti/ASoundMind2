@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 	private bool isCrazy = false;
 	private float wait;
 	public Transform[] spawnPoints;
+
 	// Use this for initialization
 	void Start () {
 		score = 0;
