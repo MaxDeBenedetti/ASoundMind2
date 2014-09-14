@@ -5,6 +5,7 @@ using System.Collections;
 [RequireComponent(typeof (SpriteRenderer))]
 public class Beam : MonoBehaviour {
 
+	public AudioSource bell;
 	private int flavor;
 	public int Flavor{
 		get{
@@ -41,6 +42,7 @@ public class Beam : MonoBehaviour {
 			if(flavor == tht.Flavor){
 				GameObject.Destroy(other.gameObject);
 				GameManager.score+=1;
+				bell.Play();
 			}
 		}
 		if(other.gameObject.tag.Equals(Tags.boundry)){

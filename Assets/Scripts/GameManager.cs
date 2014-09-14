@@ -3,9 +3,12 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
+	public AudioSource guitar;
+
 	public Thought[] thoughts;
 	public float minWait, maxWait, impatient, interval, maxWaitDecrease;
 	public static int score, sADD;
+	private int prefHighScore;
 	public TextMesh text;
 	public bool gameplaying = true;
 	private bool isCrazy = false;
@@ -26,6 +29,7 @@ public class GameManager : MonoBehaviour {
 			if(isCrazy){
 				isCrazy = !isCrazy;
 				wait = maxWait;
+				//guitar.Stop();
 				yield return  new WaitForSeconds(interval);
 			}
 			else if(wait < minWait){
@@ -33,6 +37,7 @@ public class GameManager : MonoBehaviour {
 				maxWait -= maxWaitDecrease;
 				wait = minWait;
 				float temp = 1f + Random.value*2f;
+				//guitar.Play();
 				yield return  new WaitForSeconds(temp);
 			}
 			else{
@@ -61,5 +66,14 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		text.text = "Score: " +score;
+		if(!gameplaying){
+			prefHighScore = PlayerPrefs.GetInt("highScore");
+			PlayerPrefs.SetInt("score", score);
+			if(score>prefHighScore){
+				PlayerPrefs.SetInt("highScore", score);
+			}
+			Application.LoadLevel("gameover");
+		}
 	}
+
 }
