@@ -761,7 +761,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: 699f89dd7bd2dc941b1381b815ce9095, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
 --- !u!1 &1073391569
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,6 +995,18 @@ Prefab:
     - target: {fileID: 11400002, guid: c53a9c60f02eb1345b216513ec09215b, type: 2}
       propertyPath: health
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: c53a9c60f02eb1345b216513ec09215b, type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: c53a9c60f02eb1345b216513ec09215b, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: c53a9c60f02eb1345b216513ec09215b, type: 2}
+      propertyPath: m_Color.g
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c53a9c60f02eb1345b216513ec09215b, type: 2}

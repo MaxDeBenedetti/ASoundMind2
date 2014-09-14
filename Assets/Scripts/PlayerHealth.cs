@@ -18,8 +18,14 @@ public class PlayerHealth : MonoBehaviour {
 		health = staticHealth;
 		text.text = "Health: " + health;
 		if(health <=0){
-			gm.gameplaying = false;
+			Lose();
 		}
+	}
+
+	void Lose(){
+		gm.gameplaying = false;
+		Aura aura = this.gameObject.GetComponent<Aura>();
+		aura.enabled = false;
 	}
 
 	void OnTriggerStay(Collider col){

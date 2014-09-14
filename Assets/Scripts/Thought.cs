@@ -28,7 +28,7 @@ public class Thought : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		UpdateMove();
-		if(transform.position.Equals(Vector3.zero)){
+		if(transform.position.Equals(Vector3.zero)&&PlayerHealth.staticHealth>0){
 			PlayerHealth.staticHealth -= 1;
 		}
 	}

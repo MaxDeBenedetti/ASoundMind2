@@ -19,7 +19,7 @@ public class Aura : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		flavor = 1;
+		flavor = Flavors.blue;
 	}
 	
 	// Update is called once per frame
