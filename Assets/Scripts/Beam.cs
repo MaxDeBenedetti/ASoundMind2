@@ -40,6 +40,7 @@ public class Beam : MonoBehaviour {
 			Thought tht = other.gameObject.GetComponent<Thought>();
 			if(flavor == tht.Flavor){
 				GameObject.Destroy(other.gameObject);
+				GameManager.score+=1;
 			}
 		}
 		if(other.gameObject.tag.Equals(Tags.boundry)){

@@ -4,23 +4,24 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 
 	public Thought[] thoughts;
-	public float minWait, maxWait, impatient, interval, loseItChance, maxWaitDecrease;
+	public float minWait, maxWait, impatient, interval, maxWaitDecrease;
 	public static int score, sADD;
+	public TextMesh text;
 	public bool gameplaying = true;
 	private bool isCrazy = false;
 	private float wait;
 	public Transform[] spawnPoints;
 	// Use this for initialization
 	void Start () {
+		score = 0;
 		wait = maxWait;
+		StartCoroutine("thinkHarder");
+		StartCoroutine("distract");
 	}
 
 
 	IEnumerator thinkHarder(){
 		while(maxWait > minWait){
-			if(Random.value < loseItChance){
-				wait = 0;
-			}
 			if(isCrazy){
 				isCrazy = !isCrazy;
 				wait = maxWait;
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour {
 				isCrazy = true;
 				maxWait -= maxWaitDecrease;
 				wait = minWait;
-				float temp = .5f + Random.value*1.5f;
+				float temp = 1f + Random.value*2f;
 				yield return  new WaitForSeconds(temp);
 			}
 			else{
@@ -42,9 +43,6 @@ public class GameManager : MonoBehaviour {
 
 	IEnumerator distract(){
 		while(gameplaying){
-			if(minWait < wait){
-				wait -= impatient;
-			}
 			SpawnThought();
 			yield return new WaitForSeconds(wait);
 		}
@@ -61,6 +59,6 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		text.text = "Score: " +score;
 	}
 }
